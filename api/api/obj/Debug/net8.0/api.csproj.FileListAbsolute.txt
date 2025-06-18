@@ -34,3 +34,5 @@ C:\Users\abc\angular-json-api-app\api\api\obj\Debug\net8.0\refint\api.dll
 C:\Users\abc\angular-json-api-app\api\api\obj\Debug\net8.0\api.pdb
 C:\Users\abc\angular-json-api-app\api\api\obj\Debug\net8.0\api.genruntimeconfig.cache
 C:\Users\abc\angular-json-api-app\api\api\obj\Debug\net8.0\ref\api.dll
+C:\Users\abc\angular-json-api-app\api\api\bin\Debug\net8.0\Data\data.json
+C:\Users\abc\angular-json-api-app\api\api\obj\Debug\net8.0\api.sourcelink.json

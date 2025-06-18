@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "api.Controllers.ObservationController",
+    "Method": "Get",
+    "RelativePath": "api/Observation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api.Controllers.ObservationController",
+    "Method": "Update",
+    "RelativePath": "api/Observation",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "observation",
+        "Type": "api.Models.Observation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "api.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

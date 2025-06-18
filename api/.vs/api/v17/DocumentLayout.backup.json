@@ -1,7 +1,32 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\abc\\angular-json-api-app\\api\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{04D64DF4-F373-45B1-99AA-F0722C2E147B}|api\\api.csproj|c:\\users\\abc\\angular-json-api-app\\api\\api\\data\\data.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{04D64DF4-F373-45B1-99AA-F0722C2E147B}|api\\api.csproj|solutionrelative:api\\data\\data.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04D64DF4-F373-45B1-99AA-F0722C2E147B}|api\\api.csproj|c:\\users\\abc\\angular-json-api-app\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04D64DF4-F373-45B1-99AA-F0722C2E147B}|api\\api.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04D64DF4-F373-45B1-99AA-F0722C2E147B}|api\\api.csproj|c:\\users\\abc\\angular-json-api-app\\api\\api\\controllers\\observationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04D64DF4-F373-45B1-99AA-F0722C2E147B}|api\\api.csproj|solutionrelative:api\\controllers\\observationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04D64DF4-F373-45B1-99AA-F0722C2E147B}|api\\api.csproj|c:\\users\\abc\\angular-json-api-app\\api\\api\\models\\observation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04D64DF4-F373-45B1-99AA-F0722C2E147B}|api\\api.csproj|solutionrelative:api\\models\\observation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04D64DF4-F373-45B1-99AA-F0722C2E147B}|api\\api.csproj|c:\\users\\abc\\angular-json-api-app\\api\\api\\models\\dataitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04D64DF4-F373-45B1-99AA-F0722C2E147B}|api\\api.csproj|solutionrelative:api\\models\\dataitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04D64DF4-F373-45B1-99AA-F0722C2E147B}|api\\api.csproj|c:\\users\\abc\\angular-json-api-app\\api\\api\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04D64DF4-F373-45B1-99AA-F0722C2E147B}|api\\api.csproj|solutionrelative:api\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +34,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\Program.cs",
+              "RelativeDocumentMoniker": "api\\Program.cs",
+              "ToolTip": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\Program.cs",
+              "RelativeToolTip": "api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T11:16:27.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ObservationController.cs",
+              "DocumentMoniker": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\Controllers\\ObservationController.cs",
+              "RelativeDocumentMoniker": "api\\Controllers\\ObservationController.cs",
+              "ToolTip": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\Controllers\\ObservationController.cs",
+              "RelativeToolTip": "api\\Controllers\\ObservationController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T11:15:43.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Observation.cs",
+              "DocumentMoniker": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\Models\\Observation.cs",
+              "RelativeDocumentMoniker": "api\\Models\\Observation.cs",
+              "ToolTip": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\Models\\Observation.cs",
+              "RelativeToolTip": "api\\Models\\Observation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T11:15:09.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataItem.cs",
+              "DocumentMoniker": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\Models\\DataItem.cs",
+              "RelativeDocumentMoniker": "api\\Models\\DataItem.cs",
+              "ToolTip": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\Models\\DataItem.cs",
+              "RelativeToolTip": "api\\Models\\DataItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T11:14:36.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Property.cs",
+              "DocumentMoniker": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\Models\\Property.cs",
+              "RelativeDocumentMoniker": "api\\Models\\Property.cs",
+              "ToolTip": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\Models\\Property.cs",
+              "RelativeToolTip": "api\\Models\\Property.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T11:13:39.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "data.json",
+              "DocumentMoniker": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\Data\\data.json",
+              "RelativeDocumentMoniker": "api\\Data\\data.json",
+              "ToolTip": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\Data\\data.json",
+              "RelativeToolTip": "api\\Data\\data.json",
+              "ViewState": "AgIAACMAAAAAAAAAAAAUwDgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-18T11:10:45.414Z",
+              "EditorCaption": ""
             }
           ]
         }
