@@ -32,7 +32,7 @@
       }
       @case ('detailed') {
         @if (selectedObservation()) {
-          <!-- <app-detailed-view [observation]="selectedObservation()!" /> -->
+          <app-detailed-view [observation]="selectedObservation()!" />
         } @else {
           <p class="text-muted">Please select an observation in Summary View.</p>
         }

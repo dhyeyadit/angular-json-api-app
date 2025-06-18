@@ -1,58 +1,46 @@
-<!-- <div class="container mt-3 border p-3 d-flex">
-  <div class="w-25 border-end pe-3">
-    @for (obs of observations; track = $index) {
-      <button
-        class="btn w-100 mb-2"
-        [class.btn-dark]="i === selectedIndex"
-        [class.btn-outline-dark]="i !== selectedIndex"
-        (click)="select(i)"
-      >
-        {{ obs.Datas[0].SamplingTime | date: 'dd-MM-yyyy hh:mm:ss a' }}
-      </button>
-    }
-    @empty {
-      <p>No observations found.</p>
+<div class="d-flex border p-3" style="border: 2px solid black;">
+  <div class="me-4 border-end pe-3" style="min-width: 200px; border-right: 2px solid black;">
+    @for (data of observation?.datas; track $index; let i = $index) {
+      <div class="mb-2" style="border-bottom: 1px solid gray; padding-bottom: 5px;">
+        <button
+          class="btn w-100"
+          [class.btn-dark]="i === selectedIndex"
+          [class.btn-outline-dark]="i !== selectedIndex"
+          (click)="select(i)"
+          style="text-align: left; padding-left: 10px;"
+        >
+          {{ data.samplingTime | date: 'dd-MM-yyyy hh:mm:ss a' }}
+        </button>
+      </div>
     }
   </div>
 
-  <div class="flex-grow-1 ps-3">
+  <div class="flex-grow-1 p-3" style="border: 2px solid black;">
     @if (form) {
       <form [formGroup]="form">
-        @for (prop of selectedProperties; track prop.Label) {
-          <div class="mb-3">
-            <label class="form-label">{{ prop.Label }}</label>
+        <div class="mb-3">
+          <label class="form-label">Project Name:</label>
+          <input type="text" formControlName="project_name" class="form-control" />
+        </div>
 
-            @if (typeof form.get(formatLabel(prop.Label))?.value === 'boolean') {
-              <div class="form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  [formControlName]="formatLabel(prop.Label)"
-                />
-              </div>
-            }
-            @else if (typeof form.get(formatLabel(prop.Label))?.value === 'number') {
-              <input
-                type="number"
-                class="form-control"
-                [formControlName]="formatLabel(prop.Label)"
-              />
-            }
-            @else {
-              <input
-                type="text"
-                class="form-control"
-                [formControlName]="formatLabel(prop.Label)"
-              />
-            }
-          </div>
-        }
+        <div class="mb-3">
+          <label class="form-label">Construction Count:</label>
+          <input type="number" formControlName="construction_count" class="form-control" />
+        </div>
 
-        <button type="button" class="btn btn-primary mt-2" (click)="save()">Save</button>
+        <div class="mb-3">
+          <label class="form-label">Is Construction Completed:</label>
+          <input type="checkbox" formControlName="is_construction_completed" class="form-check-input" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Length of the road:</label>
+          <input type="number" formControlName="length_of_the_road" class="form-control d-inline w-auto" />
+          <span> KM</span>
+        </div>
+
+        <button class="btn btn-primary mt-2" type="button" (click)="save()" style="width: 100px;">Save</button>
       </form>
     }
-    @else {
-      <p>Select an observation to view details.</p>
-    }
   </div>
-</div> -->
+</div>

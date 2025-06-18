@@ -1,62 +1,74 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ObservationService } from '../../services/observation.service';
+import { CommonModule } from '@angular/common';
 import { Observation, Property } from '../../../model';
+import { ObservationService } from '../../services/observation.service';
 
 @Component({
   selector: 'app-detailed-view',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './detailed-view.component.html',
 })
-export class DetailedViewComponent  {
-  // form!: FormGroup;
-  // selectedIndex = 0;
-  // observations: Observation[] = [];
+export class DetailedViewComponent implements OnInit, OnChanges {
+  @Input() observation: Observation | null = null;
 
-  // private fb = inject(FormBuilder);
-  // private obsService = inject(ObservationService);
+  form!: FormGroup;
+  selectedIndex = 0;
 
-  // ngOnInit(): void {
-  //   this.obsService.getObservations().subscribe((data) => {
-  //     this.observations = data;
-  //     this.buildForm();
-  //   });
-  // }
+  private fb = inject(FormBuilder);
+  private observationService = inject(ObservationService);
 
-  // get selectedProperties(): Property[] {
-  //   return this.observations[this.selectedIndex]?.Datas[0]?.Properties || [];
-  // }
+  ngOnInit(): void {
+    if (this.observation) {
+      this.buildForm();
+    }
+  }
 
-  // buildForm(): void {
-  //   const group: any = {};
-  //   for (let prop of this.selectedProperties) {
-  //     const name = this.formatLabel(prop.Label);
-  //     group[name] = [prop.Value];
-  //   }
-  //   this.form = this.fb.group(group);
-  // }
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['observation'] && this.observation) {
+      this.selectedIndex = 0;
+      this.buildForm();
+    }
+  }
 
-  // select(index: number): void {
-  //   this.selectedIndex = index;
-  //   this.buildForm();
-  // }
+  buildForm(): void {
+    const properties = this.observation?.datas?.[this.selectedIndex]?.properties || [];
+    const projectName = properties.find(p => p.label.toLowerCase() === 'project name')?.value ?? 'Road Construction';
+    const constructionCount = properties.find(p => p.label.toLowerCase() === 'construction count')?.value ?? 2;
+    const isConstructionCompleted = properties.find(p => p.label.toLowerCase() === 'is construction completed')?.value ?? false;
+    const lengthOfTheRoad = properties.find(p => p.label.toLowerCase() === 'length of the road')?.value ?? 5.6;
 
-  // save(): void {
-  //   const updatedProps = this.selectedProperties.map((p) => ({
-  //     ...p,
-  //     Value: this.form.get(this.formatLabel(p.Label))?.value,
-  //   }));
+    this.form = this.fb.group({
+      project_name: [projectName],
+      construction_count: [constructionCount],
+      is_construction_completed: [isConstructionCompleted],
+      length_of_the_road: [lengthOfTheRoad]
+    });
+  }
 
-  //   const obs = this.observations[this.selectedIndex];
-  //   obs.Datas[0].Properties = updatedProps;
+  select(index: number): void {
+    this.selectedIndex = index;
+    this.buildForm();
+  }
 
-  //   this.obsService.updateObservation(obs).subscribe(() => {
-  //     alert('Saved!');
-  //   });
-  // }
+  save(): void {
+    const updatedProps: Property[] = [
+      { label: 'Project Name', value: this.form.get('project_name')?.value },
+      { label: 'Construction Count', value: this.form.get('construction_count')?.value },
+      { label: 'Is Construction Completed', value: this.form.get('is_construction_completed')?.value },
+      { label: 'Length of the road', value: this.form.get('length_of_the_road')?.value }
+    ];
 
-  // formatLabel(label: string): string {
-  //   return label.toLowerCase().replace(/\s+/g, '_');
-  // }
+    if (this.observation) {
+      this.observation.datas[this.selectedIndex].properties = updatedProps;
+      this.observationService.updateObservation(this.observation).subscribe({
+        next: () => alert('Saved!'),
+        error: (err) => {
+          console.error('Error updating:', err);
+          alert('Failed to save.');
+        }
+      });
+    }
+  }
 }
