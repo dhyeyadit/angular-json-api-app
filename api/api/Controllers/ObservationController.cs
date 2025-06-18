@@ -27,8 +27,8 @@ namespace api.Controllers
                 }
 
                 var json = System.IO.File.ReadAllText(_jsonFilePath);
-                var observation = JsonSerializer.Deserialize<Observation>(json);
-                return Ok(observation);
+                var observations = JsonSerializer.Deserialize<List<Observation>>(json);
+                return Ok(observations);
             }
             catch (Exception ex)
             {

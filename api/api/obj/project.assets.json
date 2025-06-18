@@ -447,24 +447,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\abc\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\dhyey\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\api.csproj",
+      "projectUniqueName": "C:\\Users\\dhyey\\Desktop\\angular-json-api-app\\api\\api\\api.csproj",
       "projectName": "api",
-      "projectPath": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\api.csproj",
-      "packagesPath": "C:\\Users\\abc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\abc\\angular-json-api-app\\api\\api\\obj\\",
+      "projectPath": "C:\\Users\\dhyey\\Desktop\\angular-json-api-app\\api\\api\\api.csproj",
+      "packagesPath": "C:\\Users\\dhyey\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dhyey\\Desktop\\angular-json-api-app\\api\\api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\abc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\dhyey\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -489,8 +484,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -520,7 +514,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
